@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "auth": {
+      "$name": {
+        ".read": true,
+        ".write": "!data.exists()",
+        ".validate": "newData.hasChildren(['h','s','uid'])"
+      }
+    },
+    "users": {".read": true, ".write": true, ".indexOn": ["coins", "uname"]},
+    "rooms": {".read": true, ".write": true, ".indexOn": ["createdAt"]},
+    "roles": {".read": true, ".write": true},
+    "signal": {".read": true, ".write": true},
+    "friends": {".read": true, ".write": true},
+    "friendReq": {".read": true, ".write": true},
+    "friendOut": {".read": true, ".write": true},
+    "userChats": {".read": true, ".write": true},
+    "dm": {".read": true, ".write": true},
+    "gchat": {".read": true, ".write": true},
+    "invites": {".read": true, ".write": true}
+  }
+}

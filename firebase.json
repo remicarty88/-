@@ -1,0 +1,11 @@
+{
+  "database": {"rules": "database.rules.json"},
+  "hosting": {
+    "public": ".",
+    "ignore": ["firebase.json", "database.rules.json", "database_rules.json", "server.js", "package.json", "package-lock.json", "node_modules/**", "**/.*"],
+    "headers": [
+      {"source": "sw.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]},
+      {"source": "**/*.@(html|webmanifest)", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}
+    ]
+  }
+}
